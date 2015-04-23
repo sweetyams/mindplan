@@ -1,5 +1,5 @@
 /*
-Theme Name:         Reverie
+Theme Name:         MindPlan
 Theme URI:          http://themefortress.com/reverie/
 Description:        Reverie is a versatile HTML5 responsive WordPress framework based on ZURB's Foundation.
 Version:            5.2.3
@@ -8,13 +8,14 @@ Author URI:         http://themefortress.com/
 
 License:            MIT License
 License URI:        http://www.opensource.org/licenses/mit-license.php
+GitHub Theme URI:   https://github.com/sweetyams/mindplan
 */
 
 /* -------------------------------------------------- 
 
-	This stylesheet will not be loaded by default.
-	
-	The main stylesheet in css/style.css and
+  This stylesheet will not be loaded by default.
+  
+  The main stylesheet in css/style.css and
   scss/style.scss.
 
 -------------------------------------------------- */
