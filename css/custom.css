@@ -3715,7 +3715,7 @@ table.dataTable td {
   100% {
     transform: rotate(360deg);
     transform: rotate(360deg); } }
-.menu-top a {
+.menu-home a {
   color: white;
   font-weight: 600;
   -webkit-transition: all ease-in-out 0.3s;
@@ -3723,21 +3723,28 @@ table.dataTable td {
   -ms-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
-  opacity: .8; }
-  .menu-top a:hover {
+  opacity: .8;
+  line-height: 70px;
+  padding: 0 10px; }
+  .menu-home a:hover {
     opacity: 1; }
-.menu-top .logo {
+.menu-home .button {
+  line-height: inherit;
+  margin-top: 11px;
+  font-weight: 600;
+  font-size: 13px; }
+.menu-home .logo {
   position: relative;
   top: 16px;
   font-size: 30px;
   opacity: 1; }
-.menu-top .menu-right {
+.menu-home .menu-right {
   top: 16px;
   position: relative; }
-  .menu-top .menu-right li {
+  .menu-home .menu-right li {
     display: inline-block;
     margin: 0 10px; }
-  .menu-top .menu-right .link {
+  .menu-home .menu-right .link {
     font-style: normal;
     text-transform: uppercase;
     letter-spacing: 1px;

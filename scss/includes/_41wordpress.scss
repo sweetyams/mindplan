@@ -1,13 +1,23 @@
-.menu-top{
+.menu-home{
   a{
     color: white;
     font-weight: 600;
     @include transition(all,ease-in-out,.3s);
     opacity: .8;
+    line-height: 70px;
+    padding: 0 10px;
+
     &:hover{
       opacity: 1;
     }
+
   }
+  .button{
+        line-height: inherit;
+      margin-top: 11px;
+      font-weight: 600;
+      font-size: 13px;
+    }
   .logo{
     position: relative;
     top: 16px;

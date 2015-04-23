@@ -10,7 +10,7 @@ $url = get_template_directory_uri();
 <div class="full hero-client">
   <div class="row">
     <div class="small-12 columns">
-      <nav class="menu-top">
+      <nav class="menu-home">
         <a class="logo" href="/"><span class="i-mp_logo"></span></a>
 
         <ul class="menu-right"> 

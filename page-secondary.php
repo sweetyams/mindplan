@@ -13,17 +13,17 @@ $url = get_template_directory_uri();
     <div class="small-centered columns small-12">
       
       <ul class="nav">
-        <li><a href="/">Clients</a></li>
-        <li><a href="/therapists">Therapists</a></li>
-        <li><a href="/contact">Contact us</a></li>
+           <li class="link"><a href="/client">Clients</a></li>
+           <li class="link"><a href="/client">Therapists</a></li>
+           <li class="link"><a href="/blog">Blog</a></li>
       </ul>
 
       <a class="logo center" href="/"><span class="i-mp_icon"></span></a> 
         
-        <ul class="menu-right"> 
-          <li class="social"><a href="https://twitter.com/mymindplan" target="_blank"><span class="i-twitter"></span></a></li>
-          <li class="social"><a href="https://facebook.com/mymindplan" target="_blank"><span class="i-facebook"></span></a></li>
-          <li class="link"><a ui-sref="signin" href="http://app.mindplan.me/#/signin">Sign In</a></li>
+    
+      <ul class="menu-right"> 
+          <li><a  class="button small joinus button-navy hover-blue text-white" href="http://app.mindplan.me/#/join/start">Join Now</a></li>
+          <li class="link"><a href="http://app.mindplan.me/#/signin">Sign In</a></li>
         </ul>
      
     </div>
