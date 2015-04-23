@@ -27,7 +27,7 @@ $url = get_template_directory_uri();
   <div class="row">
     <div class="columns small-12 center">
       <div class="vert-out"><div class="vert-in">
-      <h1 class="top-40">IT’S TIME FOR A REAL CHANGES NEW</h1>
+      <h1 class="top-40">IT’S TIME FOR A REAL CHANGE</h1>
       <h5 class="subtitle bottom-50">Have a look at what we can help you do for your clients</h5>
       <a href="#join" class="button button-hero">Request an Invitation</a>
       </div></div>
