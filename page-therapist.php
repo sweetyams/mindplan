@@ -17,7 +17,7 @@ $url = get_template_directory_uri();
            <li class="link"><a href="/client">Clients</a></li>
            <li class="link"><a href="/blog">Blog</a></li>
           <li class="link"><a href="http://app.mindplan.me/#/signin">Sign In</a></li>
-          <li><a  class="button joinus text-white button-transparent-white hover-blue" href="http://app.mindplan.me/#/join/start">Join Now</a></li>
+          <li><a  class="button small joinus text-white button-transparent-white hover-blue" href="http://app.mindplan.me/#/join/start">Join Now</a></li>
         </ul>
       </nav>  
     </div>
