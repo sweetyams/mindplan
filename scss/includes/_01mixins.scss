@@ -1,0 +1,200 @@
+// MIXINS
+
+@mixin brandon{
+font-family: "brandon-grotesque", BrandonText-Regular, "proxima-nova", sans-serif;
+font-style: normal;
+}
+
+@mixin text { 
+  font-family: BrandonText-Light, "proxima-nova", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin proxima{
+  font-family: BrandonText-Regular, sans-serif;
+  font-style: normal;
+}
+
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
+
+@mixin transition($transition-property,$transition-time, $transition-ease){
+  -webkit-transition: $transition-property $transition-time $transition-ease;
+  -moz-transition: $transition-property $transition-time $transition-ease;
+  -ms-transition: $transition-property $transition-time $transition-ease;
+  -o-transition: $transition-property $transition-time $transition-ease;
+  transition: $transition-property $transition-time $transition-ease;
+}
+
+@mixin rotate($degree){    
+  -webkit-transform: rotate(#{$degree}deg);
+  -moz-transform: rotate(#{$degree}deg);
+  -o-transform: rotate(#{$degree}deg);
+  -ms-transform: rotate(#{$degree}deg);
+  transform: rotate(#{$degree}deg);
+}
+
+@mixin linear-gradient($from, $to, $degrees){
+  background-image: $from; /* Old browsers */
+  background-image: -moz-linear-gradient(#{$degrees}deg,  $from 0%, $to 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%,$from), color-stop(100%,$to));
+  background-image: -webkit-linear-gradient(45deg,  $from 0%,$to 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(#{$degrees}deg,  $from 0%,$to 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(#{$degrees}deg,  $from 0%,$to 100%); /* IE10+ */
+  background-image: linear-gradient(#{$degrees}deg,  $from 0%,$to 100%) ; /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+  background-attachment: fixed;
+  background-position:fixed;
+}
+
+@mixin border-top-radius($radius) {
+-moz-border-radius-topright: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+-moz-border-radius-topleft: $radius;
+   -webkit-border-top-left-radius: $radius;
+   border-top-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+-moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+-moz-border-radius-topright: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+-moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+-moz-border-radius-bottomleft: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   border-bottom-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+-moz-border-radius-bottomleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+-moz-border-radius-topleft: $radius;
+     -webkit-border-top-left-radius: $radius;
+     border-top-left-radius: $radius;
+     background-clip: padding-box;
+}
+
+@mixin border-radius($radius){
+border-radius: $radius;
+-webkit-border-radius: $radius;
+}
+
+@mixin transform-scale($horiz, $vert) {
+       transform: scale($horiz,$vert);
+-ms-transform: scale($horiz,$vert);
+-webkit-transform: scale($horiz,$vert);
+}
+
+@mixin transform-origin($horiz, $vert){
+	transform-origin: $horiz $vert;
+	-webkit-transform-origin: $horiz $vert;
+}
+
+@mixin background($image,$position1,$position2,$size){
+  background:url(../img/#{$image});
+  background-position: $position1 $position2;
+  background-size: $size; 
+}
+
+@mixin backgroundmobile($image,$position1,$position2,$size){
+  background:url(../img/mobile/#{$image});
+  background-position: $position1 $position2;
+  background-size: $size; 
+}
+
+@mixin border{
+  border-radius: 2px;
+  -webkit-border-radius : 2px;
+}
+
+@mixin headers($key,$value){
+ h1,h2,h3,h4,h5,h6{
+  #{$key}: #{$value};
+ } 
+}
+
+
+//Margin & Padding Helper Classes
+
+$list: 10 20 30 40 50 60 80 100 150;
+
+@mixin list($name,$variable) {
+  @each $number in $list {
+    .#{$name}-#{$number} {
+      #{$variable}: #{$number}px;
+    }
+  }
+}
+@include list(top,padding-top);
+@include list(bottom,padding-bottom);
+
+
+
+$range: 1,2,3,4,5,6,7,8,9,10;
+@mixin rating($from,$to) {
+  @for $i from 1 through length($range) {
+    $c: nth($range, $i);
+    $percent: $c * 10;
+
+    span.active:nth-child(#{$c}) {
+      background: mix($to, $from, $percent);
+    }
+  }
+}
+
+
+
+@function lower-bound($range){
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range,1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range, 2);
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+// Here we define the lower and upper bounds for each media size
+$small-range: (0em, 40em); /* 0, 640px */
+$medium-range: (40.063em, 64em); /* 641px, 1024px */
+$large-range: (64.063em, 90em); /* 1025px, 1440px */
+$xlarge-range: (90.063em, 120em); /* 1441px, 1920px */
+$xxlarge-range: (120.063em); /* 1921px */
+
+// Media Queries
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+$small-up: $screen !default;
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;

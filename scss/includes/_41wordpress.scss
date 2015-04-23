@@ -1,0 +1,495 @@
+.menu-top{
+  a{
+    color: white;
+    font-weight: 600;
+    @include transition(all,ease-in-out,.3s);
+    opacity: .8;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .logo{
+    position: relative;
+    top: 16px;
+    font-size: 30px;
+    opacity: 1;
+  }
+
+  .menu-right{
+      top: 16px;
+      position: relative;
+    li{
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .link{
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 1;
+      vertical-align: top;
+      letter-spacing: 2px;
+      position: relative;
+    }
+
+
+  }
+
+}
+
+    .social{
+      margin-bottom: 6px;
+      position: relative;
+      a{
+        font-size: 22px;
+        color: white;
+        margin-bottom: 5px;
+        position: relative;
+        opacity: .7;
+        @include transition(all,ease-in-out,.3s);
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+
+.page-title{
+  text-transform: uppercase;
+}
+
+.emailbox, .phonebox{
+   padding: 23px 30px 20px 30px;
+  border-radius: 2px;
+  background: $gray5;
+  display: inline-block;
+  letter-spacing: 1px;
+  color: $navy;
+  min-width: 210px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  @include transition(all,ease-in-out,.3s);
+  h6{
+    @include transition(all,ease-in-out,.3s);
+  }
+  &:hover{
+    h6{
+      color: white;
+    }
+    background: $navy;
+    color: white;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.menu-right{
+    float: right;
+    text-align: right;
+  }
+
+.hero-client, .hero-therapist{
+  background: url("../img/header-client.jpg");
+  background-size: cover;
+  height: 95svh;
+  h1{
+    color: white;
+    font-weight: 500;
+    @include brandon;
+    font-size: 50px;
+  }
+  .subtitle{
+    color: white;
+    font-size: 34px;
+  }
+  .button-hero{
+    font-weight: 600;
+    padding: 22px 40px;
+  }
+}
+
+
+
+.hero-therapist{
+  background: url("../img/header-therapist.jpg");
+  background-size: cover;
+}
+
+.subtitle{
+  @include text;
+  font-weight: 100;
+  font-size: 34px;
+  font-style: italic;
+  color: $navy;
+}
+
+.button{
+  letter-spacing: 2px;
+}
+
+.features img{
+  width: 120px;
+}
+.features li{
+  width: 200px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  height: 190px;
+  padding-top: 25px;
+  display: inline-block;
+  margin: 5px;
+  &:hover{
+    -webkit-box-shadow: 0px 0px 0px 2px rgba(82,92,102,1);
+    -moz-box-shadow: 0px 0px 0px 2px rgba(82,92,102,1);
+    box-shadow: 0px 0px 0px 2px rgba(82,92,102,1);
+  }
+}
+
+
+.sidemenu {
+  margin-bottom: 40px;
+  h6{
+    opacity: .3;
+  }
+  ul{
+    margin-top: 15px;
+  }
+  li{
+    margin-bottom: 8px;
+  }
+  a{
+    color: $navy;
+    &:hover{
+      color: $blue;
+    }
+  }
+  .active{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    a{
+      background: $navy;
+      padding: 10px 15px;
+      margin-left: -15px;
+      color: white;
+      border-radius: 2px;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+}
+
+.full p{
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+p{
+  color: $gray60;
+  font-size: 18px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  @include brandon;
+}
+
+.full h1{
+  text-transform: uppercase;
+}
+
+.page-content{
+  ul{
+    margin-bottom: 30px;
+  }
+  li{
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    &:before{
+      position: absolute;
+      content: "•";
+      left: -20px;
+      font-size: 20px;
+      top: -4px;
+      color: $gray35;
+    }
+  }
+
+}
+
+.hover{
+  background: #3c4147;
+  position: absolute;
+  line-height: 34px;
+  border-radius: 2px;
+  padding: 0 6px;
+  top: 70px;
+  left: 50%;
+  width: 150px;
+  margin-left: -75px;
+  font-size: 11px;
+  visibility: hidden;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  @include transition(all,ease-in-out,.3s);
+  &:after{
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4px 4px 4px;
+    border-color: transparent transparent #3c4147 transparent;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+
+.devices{
+  color: white;
+  margin-top: 30px;
+  font-size: 50px;
+  li{
+    display: inline-block;
+    position: relative;
+  }
+  .inactive{
+    color: rgba($white,.2);
+  }
+
+  li:hover .hover{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+.hideover{
+  overflow: hidden;
+}
+
+.scans{
+  height: 600px;
+  margin-left: 100px;
+  margin-top: 80px;
+  @include transition(all,ease-in-out,.5s);
+  text-align: center;
+  &:hover{
+    margin-top: 40px;
+    height: 640px;
+  }
+  li{
+    background: rgba(35, 35, 35, .1);
+    display: block;
+    border-radius: 2px;
+    width: 180px;
+    height: 160px;
+    margin-bottom: 7px;
+    text-align: center;
+    padding-top: 40px;
+    position: relative;
+  }
+  h6{
+      margin-top: 12px;
+  }
+  .icon{
+    font-size: 50px;
+    color: #ffffff;
+  }
+
+  .hover{
+    left: -280px;
+    top: 50%;
+    line-height: 24px;
+    font-size: 17px;
+    width: 270px;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-top: -40px;
+    &:after{
+      content: " ";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 0px 4px 4px;
+      border-color: transparent transparent transparent #3c4147;
+      position: absolute;
+      right: -4px;
+      left:auto;
+      top: 50%;
+      margin-top: -2px;
+    }
+  }
+  li:hover .hover{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.resultsplace{
+  height: 300px;
+  display: block;
+  width: 100%;
+}
+.results{
+  width: 2964px;
+
+  position: absolute;
+  -webkit-animation: moveSlideshow 35s linear infinite;
+  -moz-animation:    moveSlideshow 35s linear infinite;
+  li{
+    background: $gray5;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 460px;
+    margin: 0 15px;
+    padding: 20px 10px 30px 10px;
+  }
+  .title{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+  }
+  .score{
+      width: 160px;
+      position: absolute;
+      margin-top: 10px;
+      h6{
+        font-size: 8px;
+      }
+  }
+  .chart{
+    width: 280px;
+  }
+  .text{
+    margin-left: 80px;
+    margin-top: 20px;
+    width: 200px;
+  }
+}
+.results.wp .chart{
+  margin-bottom: 0;
+}
+.results.therapist{
+  .chart{
+    width: 340px;
+    margin-bottom: -30px;
+  }
+}
+
+@-webkit-keyframes moveSlideshow {
+    0% { left: 0; }
+    100% { left: -1482px; }
+}
+@-moz-keyframes moveSlideshow {
+    0% { left: 0; }
+    100% { left: -1482px; }
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+:-ms-input-placeholder {  
+   color: white;
+}
+
+
+.input{
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+
+  input{
+    background: rgba(35, 35, 35, .1);
+    color: white;
+    @include text;
+    font-size: 20px;
+    height: 70px;
+    border-radius: 2px;
+  }
+  input[type="email"]:focus{
+    background: rgba(35, 35, 35, .2);
+  }
+  .button{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    height: 56px;
+  }
+}
+
+footer.navy{
+  .logo{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    left:0;
+    top:-17px;
+  }
+  .mail{
+    position: relative;
+    text-align: left;
+    padding-left: 100px;
+    opacity: 1;
+    a{
+      color: white;
+    }
+  }
+
+  nav {
+
+    .separate{
+      margin-top: 40px;
+    }
+    .menu-item:not(.separate){
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: rgba($white,.7);
+    }
+
+    a{
+    color: rgba($white,.5);
+    display: block;
+    line-height: 30px;
+
+    &:hover{
+      color: white;
+    }
+    @include transition(all,ease-in-out,.5s);
+
+    }
+    .active a{
+      color: white;
+    }
+  }
+
+  .copy{
+    font-size: 13px;
+    color: rgba($white,.5);
+    text-align: left;
+  }
+}

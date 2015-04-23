@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="256 236 280 140" enable-background="new 256 236 280 140" xml:space="preserve">
+<g>
+	<rect x="449.3" y="272.9" fill="#E6E7E8" width="42.1" height="66.2"/>
+	<line fill="none" stroke="#E5E5E4" stroke-width="0.6244" stroke-miterlimit="10" x1="480.6" y1="306" x2="522.8" y2="306"/>
+	<line fill="none" stroke="#D0D2D3" stroke-width="0.6244" stroke-miterlimit="10" x1="523" y1="298.8" x2="523" y2="313.2"/>
+	<line fill="none" stroke="#D0D2D3" stroke-width="0.6244" stroke-miterlimit="10" x1="265" y1="306" x2="372.7" y2="306"/>
+	<line fill="none" stroke="#D0D2D3" stroke-width="0.6244" stroke-miterlimit="10" x1="265" y1="298.8" x2="265" y2="313.2"/>
+	<rect x="286.9" y="302.3" fill="#525C66" width="193.7" height="7.3"/>
+	<rect x="334.3" y="298.8" fill="#66A1D2" width="118.4" height="14.4"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="0.6244" stroke-miterlimit="10" x1="389.3" y1="298.8" x2="389.3" y2="313.2"/>
+	<text transform="matrix(1 0 0 1 326.7985 325.1239)" fill="#000100" font-family="'BrandonGrotesque-Regular'" font-size="6.1892">10</text>
+	<text transform="matrix(1 0 0 1 369.2765 325.1239)" fill="#000100" font-family="'BrandonGrotesque-Regular'" font-size="6.1892">25</text>
+	<text transform="matrix(1 0 0 1 432.9318 325.1239)" fill="#000100" font-family="'BrandonGrotesque-Regular'" font-size="6.1892">50</text>
+	<text transform="matrix(1 0 0 1 497.9269 325.1239)" fill="#000100" font-family="'BrandonGrotesque-Regular'" font-size="6.1892">75</text>
+	<text transform="matrix(1 0 0 1 518.9103 325.1239)" fill="#000100" font-family="'BrandonGrotesque-Regular'" font-size="6.1892">90</text>
+	<line fill="none" stroke="#DF756B" stroke-width="1.2488" stroke-miterlimit="10" x1="456.6" y1="284" x2="456.6" y2="328"/>
+</g>
+</svg>

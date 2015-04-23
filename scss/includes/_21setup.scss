@@ -1,0 +1,925 @@
+// 1 GENERAL & TYPOGRAPHY SETTINGS
+// 2 BUTTONS AND ITEMS
+// 3 INPUTS & FORM ELEMENTS
+// 4 COLOUR CLASSES
+// 5 HELPER AND EXTRA CLASSES
+// 6 STEPS
+// 7 SLIDER
+
+// 1 GENERAL & TYPOGRAPHY SETTINGS
+body, h1, h2, h3, h4, h5, h6{
+  @include text;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: .02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6{
+letter-spacing: .04em;
+font-weight: 400;
+color: $navy;
+}
+
+h1.huge{
+  font-weight: 100;
+  font-size: 80px;
+}
+h3{
+  @include text;
+}
+h6{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.6px;
+}
+
+p{
+  @include text;
+  color: $gray35;
+  font-size: 1em;
+  font-weight: 300;
+  &.large{
+    font-size: 1.2em;
+  }
+}
+
+p.small{
+    font-size: .7em;
+    color: $gray35;
+    margin-top: 30px;
+    line-height: 1.8;
+    a{
+      color: $navy;
+      font-weight: 500;
+    }
+  }
+
+.row{
+  max-width: 76em;
+}
+
+hr{
+  border-style: solid;
+  border-color: $gray10;
+}
+
+body{
+  background: white;
+  color: $navy;
+}
+
+strong, b{
+  font-weight: 700;
+}
+
+ul{
+  list-style: none;
+  margin:0;
+  @include text;
+}
+
+// 2 BUTTONS AND ITEMS
+
+.button{
+  @include border;
+  text-transform: uppercase;
+  @include brandon;
+  letter-spacing: 1px;
+  margin:0;
+  font-weight: 500;
+}
+
+.button.small{
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.button.large{
+  height: 60px;
+  font-size: .8em;
+  line-height: 60px;
+  padding: 0 20px;
+}
+.button.full{
+  width: 100%;
+}
+
+a{
+  color:$blue;
+  @include transition(color,500ms, ease);
+  
+  &:hover{
+    color:darken($blue,8%);
+  }
+  &.white{
+    color: $navy;
+    &:hover{
+      color : rgba( $white, .8);
+    }
+  }
+}
+
+.button{
+  background: $blue;
+  color: $white;
+  &:hover{
+    background: darken($blue,5%);
+  }
+}
+
+.button{
+  &.button-transparent-white{
+    background: rgba($white,.2);
+  }
+  &.button-gray10{
+    background: $gray10;
+  }
+  &.button-red{
+    background: $red;
+    &.dark{
+      background: darken($red,5%);
+    }
+  }
+  &.button-blue{
+    background: $blue;
+    &.dark{
+      background: darken($blue,5%);
+    }
+  }
+  &.button-teal{
+    background: $teal;
+    &.dark{
+      background: darken($teal,10%);
+    }
+  }
+  &.button-navy{
+    background: $navy;
+    &.darken:hover{
+      background: darken($navy,5%);
+    }
+  }
+  &.button-green{
+    background: $green;
+    &.darken:hover{
+      background: darken($green,5%);
+    }
+  }
+  &.button-white{
+    background: $white;
+  }
+  &.text-dark{
+    color: mix($navy, $black, 85%) !important;
+  }
+  &.text-navy{
+    color: $navy !important;
+  }
+  &.text-blue{
+    color: $blue !important;
+  }
+  &.text-green{
+    color: $green !important;
+  }
+  &.text-white{
+    color: $white !important;
+  }
+  &.hover-white:hover{
+    background: $white !important;
+  }
+  &.hover-blue:hover{
+    background: $blue !important;
+  }
+  &.hover-darkteal:hover{
+    background: darken($teal,5%) !important;
+  }
+  &.hover-darkblue:hover{
+    background: darken($blue,5%) !important;
+  }
+  &.hover-darknavy:hover{
+    background:  darken($navy,5%) !important;
+  }
+  &.hover-navy:hover{
+    background: $navy !important;
+  }
+  &.hover-gray15:hover{
+    background: $gray15 !important;
+  }
+  &.hover-darkred:hover{
+    background: darken($red,5%) !important;
+  }
+  &.htext-white:hover{
+    color: white !important;
+  }
+  &.htext-blue:hover{
+    color: $blue !important;
+  }
+  &.htext-teal:hover{
+    color: $teal !important;
+  }
+  &.htext-navy:hover{
+    color: $navy !important;
+  }
+
+}
+
+
+// 3 INPUTS & FORM ELEMENTS
+
+form{
+  margin-bottom: 0;
+}
+
+*::-webkit-input-placeholder,
+*:-moz-placeholder,
+*::-moz-placeholder ,
+*:-ms-input-placeholder {
+    color: $gray35;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea, input{
+  
+  -moz-appearance:    textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+
+  box-shadow: none;
+  border:0;
+  outline: none;
+  height: 60px;
+  margin-bottom: 0px;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: .3px;
+  @include proxima;
+  padding-left: 20px;
+  color: $navy;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus{
+  box-shadow: none;
+  border:0;
+  outline: none;
+  box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0);
+}
+
+input[type="password"][disabled]{
+  background: white;
+}
+
+input.hidden{
+  opacity: 0;
+  height: 1px;
+  width:1px;
+  padding: 0;
+  margin:0;
+}
+.error, .success, .message{
+  background: $red;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 0px;
+  overflow: hidden;
+  line-height: 40px;
+  @include transition(height,ease-in-out,.4s);
+  span{
+    padding: 12px 15px;
+    display: inline-block;
+  }
+  &.active{
+    height: 40px;
+  }
+}
+.success{
+  background: $green;
+}
+.message{
+  background: $blue;
+  display: block;
+  padding: 0 30px;
+  margin: 0;
+  border-radius: 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.parsley-errors-list{
+  display: none !important;
+}
+.parsley-valid, .parsley-error{
+  &:after{
+    font-size: 24px;
+    font-family: 'mindplan-app';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    right: 10px;
+    line-height: 60px;
+    top:0;
+  }
+}
+.parsley-valid:after{
+  content: "\e612";
+  color: $green;
+}
+.parsley-error:after{
+  content: "\e613";
+  color: $red;
+}
+
+.checkbox{
+  position: relative;
+  margin-bottom: 8px;
+  overflow: auto;
+  background: white;
+  height: 60px;
+  input[type="checkbox"] + label{
+    margin:0;
+  }
+  input{
+    opacity: 0;
+    width:1px;
+    height:1px;
+    visibility:hidden;
+    position: absolute;
+  }
+
+  label{
+    line-height: 60px;
+    display: block;
+    position: relative;
+    width: 100%;
+    float: left;
+    text-align: left;
+    padding-left: 80px;
+  }
+
+   label:before{
+    display: block;
+    content: " ";
+    background: $gray5;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    border-radius: 2px;
+    left:10px;
+    top:13px;
+  }
+  input:checked{
+    background: red;
+  }
+  input:checked + label:before {
+    background: $navy;
+  }
+  input:checked + label:after {
+    font-family: 'mindplan-app';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e612";
+    position: absolute;
+    line-height: 60px;
+    color: white;
+    width: 34px;
+    left: 11px;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+input[type="submit"]{
+  @include border;
+  outline: none;
+}
+
+button{
+  @include proxima;
+  outline: none;
+  margin:0;
+}
+
+.input{
+  position: relative;
+  margin-bottom: 8px;
+  vertical-align: top;
+}
+
+.input.extras{
+  @include transition(all,ease-in-out,.5s);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.input.hidden{
+  z-index: -1;
+  margin-top: -68px;
+  opacity: 0;
+}
+
+.focus{
+  z-index: 10;
+}
+
+span.info{
+  display: block;
+  background: #518ECB;
+  left: 0;
+  text-transform: uppercase;
+  color: white;
+  @include border;
+  padding: 12px 15px;
+  font-size: 11px;
+  font-weight: 600;
+  position: relative;
+  top: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 100%;
+  height: 40px;
+  margin-top: -40px;
+  z-index: -1;
+  @include transition(all,ease-in-out,.5s);
+}
+.focus span.info{
+  margin-top: 0;
+}
+
+.forgot{
+  position: absolute;
+  right: 16px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $gray35;
+  font-size: .8em;
+  z-index: 100;
+  top: 0;
+  &:hover{
+    color: $blue;
+  }
+}
+
+.double .half{
+  width: 50%;
+  display: inline-block;
+}
+
+.double .height, .double .track{
+  width: 65%;
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+}
+
+.double .weight, .double .copy{
+  width: 35%;
+  display: inline-block;
+}
+
+.double{
+  text-align: left;
+  position: relative;
+  height: 68px;
+}
+
+.double .half:first-child, .double .height{
+  padding-right: 4px;
+}
+.double .half:last-child, .double .weight{
+  padding-left: 4px;
+}
+
+.double .half:last-child h6{
+  left: 24px;
+}
+
+select{
+
+}
+
+textarea{
+
+}
+
+fieldset{
+  border:none;
+  margin:0;
+  padding:0;
+}
+
+
+// 4 COLOUR CLASSES
+
+.gray5{
+  background: $gray5;
+}
+
+.gray10{
+  background: $gray10;
+}
+
+.white{
+  background: $white;
+}
+.navy{
+  background: $navy;
+  @include headers(color,$white);
+  p{
+    color: $gray20;
+  }
+}
+.blue{
+  background: $blue;
+  @include headers(color,$white);
+  p{
+    color: $white;
+  }
+}
+.teal{
+  background: $teal;
+  @include headers(color,$white);
+  p{
+    color: $white;
+  }
+}
+.green{
+  background: $green;
+}
+
+
+// 5 HELPER AND EXTRA CLASSES
+
+.changepass{
+  position: absolute;
+  right:10px;
+  top:7px;
+}
+
+.cancelpassword{
+  margin-top: 30px;
+  a{
+    color: $navy;
+  }
+}
+
+.panel{
+  border: none;
+  padding: 2em;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+
+.textleft{
+  text-align: left;
+}
+
+.textright{
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+.overlay-scale {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0s 0.4s;
+  transition: transform 0.4s, opacity 0.4s, visibility 0s 0.4s;
+}
+
+.overlay-scale.open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);  
+  -webkit-transition: -webkit-transform 1.2s, opacity 1.2s;
+  transition: transform 1.2s, opacity 1.2s;
+}
+
+.vert-out {
+  display: table;
+  width: 100%;
+  position: relative;
+  min-height: calc(100vh - 70px);
+  @include transition(background,ease-in-out,.4s);
+}
+
+.vert-in {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.vert-out.group{
+  background: $navy;
+  h4{
+    color: white;
+  }
+}
+
+
+// 6 STEPS
+
+$stepinactive : 14px;
+$stepactive : 18px;
+
+@mixin step($size){
+  height:$size;
+  width: $size;
+  border-radius: $size/2;
+  top: (23+$size/2)*-1;
+  margin-left: $size/2*-1;
+  border-radius: $size/2;
+}
+
+@mixin stepcheck{
+  &:after{
+    display: inline-block;
+    font-family: 'mindplan-app';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e612";
+    z-index: 10;
+    color: white;
+    font-size: 15px;
+    line-height: 19px;
+    width: 18px;
+    text-align: right;
+  }
+}
+
+@mixin activestep($color) {
+  color: $color;
+  span{
+    background: $color;
+  }
+}
+@mixin finishedstep {
+  color: $green !important;
+  span{
+    @include step($stepactive);
+    background: $green !important;
+    @include stepcheck
+  }
+}
+
+.gray5{
+  .steps .step {
+    color: $gray20;
+    span{
+      box-shadow: 0 0px 0px 8px $gray5;
+      background : $gray20;
+    }
+    &:before{
+      background: $gray10;
+    }
+  }
+}
+
+
+.steps{
+  text-align: center;
+width: 100%;
+margin-top: 80px;
+max-width: 500px;
+margin: 80px auto 0 auto;
+
+  &.v5{
+    max-width: 600px;
+    .step{
+      width: 20%;
+    }
+  }
+
+  .step{
+    width: 25%;
+    display: inline-block;  
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    color: $gray10;
+    position: relative;
+    span, &:before{
+      content: "";
+      background: $gray5;
+      position: absolute;
+    }
+    span{
+      display: inline-block;
+      left:50%;
+      box-shadow: 0 0px 0px 8px rgba(255, 255,255, 1);
+      background : $gray5;
+      @include step($stepinactive);
+    }
+    &:before{
+      width: 100%;
+      height: 1px;
+      top: -23px;
+      left: 50%;
+      z-index: 0;
+    }
+    &:last-child:before{
+      display: none;
+    }
+    &.complete{
+      @include finishedstep;
+    }
+    &.active{
+      @include activestep($blue);
+    }
+  }
+  &.start .step:nth-child(1){
+    @include activestep($blue);
+  }
+
+  &.health{
+    .step:nth-child(1){
+      @include finishedstep;
+    }
+    .step:nth-child(2){
+      @include activestep($blue);
+    }
+  }
+  &.more{
+    .step:nth-child(1), .step:nth-child(2){
+      @include finishedstep;
+    }
+    .step:nth-child(3){
+      @include activestep($blue);
+    }
+  }
+  &.commitment{
+    .step:nth-child(1), .step:nth-child(2), .step:nth-child(3){
+      @include finishedstep;
+    }
+    .step:nth-child(4){
+      @include activestep($blue);
+    }
+  }
+  &.complete{
+    display: none;
+    .step:nth-child(1), .step:nth-child(2), .step:nth-child(3), .step:nth-child(4){
+      @include finishedstep;
+    }
+  }
+
+}
+
+
+// 7 SLIDER
+
+.sliderinput{
+  width: 100%;
+  height: 60px;
+  text-align: left;
+  line-height: 60px;
+  @include proxima;
+  padding-left: 20px;
+  color: $gray35;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.slide-contain{
+  display: inline-block;
+}
+.slider{
+  display: inline-block;
+  float: right;
+  height: 60px;
+  background: $gray5;
+  width: 300px;
+  padding-left: 8px;
+  position: relative;
+
+  .slide{
+    display: inline-block;
+    width: 90px;
+    box-sizing: border-box;
+    height: 48px;
+    margin:0;
+    line-height: 48px;
+    @include border;
+    text-align: center;
+    @include brandon;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    color: $gray35;
+    @include transition(all, ease-in-out,.3s);
+    margin-top: 6px;
+    vertical-align: top;
+    &:hover{
+      background: $gray10;
+    }
+    &.active{
+      background: $blue;
+      color: $white;
+    }
+  }
+  input:checked + label.slide, input:checked + label.slide:hover{
+      background: $navy;
+      color: white;
+    }
+
+  &.parsley-error:after, &.parsley-valid:after{
+    left: -28px;
+    right:auto;
+  }
+  &.s4, &.s2{
+    float: none;
+    display: block;
+    margin: 0 auto;
+    background: $white;
+    margin-bottom: 20px;
+    padding-left: 0;
+    width: 400px;
+    .slide{
+      color: $navy;
+      width: auto;
+      padding: 0 20px;
+    }
+  }
+  &.s4 .slide{
+    margin-top: 46px;
+  }
+  &.s2{
+    width: 230px;
+  }
+  &.hasicons{
+    width: 740px;
+    height: 140px;
+    position: relative;
+    span{
+      position: absolute;
+    }
+    .icon-left, .icon-right{
+      font-size: 45px;
+      line-height: 140px;
+      left: 40px;
+    }
+    .icon-right{
+      left:auto;
+      right: 40px;
+    }
+
+  }
+}
+
+.sliderinput .s2{
+  display: inline-block;
+  float: right;
+  height: 60px;
+  background: $white;
+  width: 300px;
+  padding-left: 8px;
+  position: relative;
+  input:checked + label{
+    background: $navy;
+    color: $white;
+  }
+  .slide{
+    width: 142px;
+  }
+}
+
+

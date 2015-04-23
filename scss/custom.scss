@@ -1,0 +1,25 @@
+// SETUP & DEFAULTS
+@import "includes/01mixins";
+@import "includes/02variables";
+@import "includes/03animations";
+
+// IMPORTS
+@import "includes/11icomoon"; // Icomoon font import
+@import "includes/12brandon"; // Brandon 
+
+// MAIN CSS
+@import "includes/21setup";
+@import "includes/22main";
+
+//EXTERNAL & PLUGINS
+// @import "includes/31select"; // Select elements
+// @import "includes/32animsition"; // Page animations
+// @import "includes/33lightslider"; // Slider (profile page)
+@import "includes/34datatables"; // Slider (profile page)
+@import "includes/35loadingbar"; // Slider (profile page)
+
+//WORDPRESS
+@import "includes/41wordpress"; // Slider (profile page)
+
+// RESPONSIVE
+@import "includes/90responsive";

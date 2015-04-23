@@ -1,0 +1,60 @@
+//MEDIA QUERIES & FIXES
+@media #{$small-up} { 
+/* 0, 640px */
+
+/* END0, 640px */
+}
+
+@media #{$medium-up} { 
+/* 641px, 1024px */
+.menu-top{
+  text-align: center;
+  .logo span{
+    font-size: 26px;
+  }
+  
+}
+.home .menu-top{
+  .homelink{
+    display: block;
+  }
+}
+.home-header{
+   height: 600px;
+  h1{
+    font-size: 50px;
+    margin-top: 140px;
+  }
+  p{
+    margin: 30px 0;
+  }
+}
+
+/* END 641px, 1024px */
+}
+
+@media #{$large-up} { 
+/* 1025px, 1440px */
+.menu-top{
+  .logo span{
+    font-size: 32px;
+  }
+}
+.home-header{
+  height: 700px;
+  h1{
+    font-size: 60px;
+    margin-top: 180px;
+  }
+  p{
+    margin: 40px 0;
+  }
+}
+/* END 1025px, 1440px */
+}
+
+@media #{$xlarge-up} { 
+/* 1441px, 1920px */
+
+/* END 1441px, 1920px */
+}
