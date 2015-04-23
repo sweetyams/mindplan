@@ -17,8 +17,8 @@ $url = get_template_directory_uri();
            <li class="link"><a href="/client">Clients</a></li>
            <li class="link"><a href="/blog">Blog</a></li>
           <li class="link"><a href="http://app.mindplan.me/#/signin">Sign In</a></li>
-          <li><a  class="button small joinus text-white button-transparent-white hover-blue" href="http://app.mindplan.me/#/join/start">Join Now</a></li>
-        </ul>
+<!--           <li><a  class="button small joinus text-white button-transparent-white hover-blue" href="http://app.mindplan.me/#/join/start">Join Now</a></li>
+ -->        </ul>
       </nav>  
     </div>
   </div>
@@ -29,7 +29,7 @@ $url = get_template_directory_uri();
       <div class="vert-out"><div class="vert-in">
       <h1 class="top-40">IT’S TIME FOR A REAL CHANGE</h1>
       <h5 class="subtitle bottom-50">Have a look at what we can help you do for your clients</h5>
-      <a href="#join" class="button button-hero">Request an Invitation</a>
+      <?php echo do_shortcode("[mc4wp_form id='68']"); ?>
       </div></div>
     </div>
   </div>
@@ -181,25 +181,8 @@ $url = get_template_directory_uri();
       <h1 class="bottom-10">SIGN UP FOR EARLY ACCESS</h1>
       <p class="bottom-50">Want more information and early access?</p>
 
-	  <a href="http://app.mindplan.me/#/join/start" class="button button-white text-blue hover-darkblue htext-white"> </a>
 
-<!--
-<form action="//mindplan.us10.list-manage.com/subscribe/post?u=9df2fe12d14107bdc9a913b7d&amp;id=4231cae256" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	
-	<div class="input">
-		
-		<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-		<div id="mce-responses" class="clear">
-			<div class="response" id="mce-error-response" style="display:none"></div>
-			<div class="response" id="mce-success-response" style="display:none"></div>
-		</div>
-	    
-	    <div style="position: absolute; left: -5000px;"><input type="text" name="b_9df2fe12d14107bdc9a913b7d_4231cae256" tabindex="-1" value=""></div>
-	    
-	    <input style="font-size:16px;" type="submit" value="Request Invite" name="subscribe" id="mc-embedded-subscribe" class="button button-blue text-white hover-white htext-blue">
-    </div>
-</form>
--->
+    <?php echo do_shortcode("[mc4wp_form id='68']"); ?>
 
     </div>
 
