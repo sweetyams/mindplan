@@ -521,3 +521,115 @@ footer.navy{
   background: $green;
   color: white;
 }
+
+.blogcontainer{
+  height: calc(100% - 70px);
+  max-width: 100%;
+  .header{
+    height: 100%;
+    display: block;
+    position: relative;
+    padding: 0;
+  }
+  .background{
+    margin-left: -1000px;
+    background: $navy;
+    background: url("../img/header-blog.jpg");
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 1000px;
+      overflow: auto;
+  }
+  .content{
+    margin:0;
+    padding:0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    float: right;
+    max-width: 360px;
+  }
+  .connect{
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+  }
+  h1{
+    color: white;
+    margin:0;
+    font-weight: 500;
+    font-size: 70px;
+    letter-spacing: .1em;
+  }
+  .social{
+    color: white;
+    display: inline-block;
+    opacity: 1;
+  }
+  .blog-content{
+    padding: 0;
+    height: 100%;
+    overflow: scroll;
+  }
+  article{
+    padding: 60px 35px;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+    h2 a{
+      text-transform: uppercase;
+      color: $navy;
+      font-weight: 300;
+    }
+    h6 time{
+      color: $gray35;
+    }
+    p{
+      margin-bottom: 0;
+    }
+    .slidehover{
+      width:0;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      margin-left: 100%;
+      background: $gray5;
+      @include transition(all,ease-in-out,.3s);
+
+    }
+    &:hover .slidehover{
+      width: 100%;
+      margin-left: 0;
+    }
+    .article-content{
+      position: relative;
+    }
+  }
+}
+
+.blog-title{
+  padding: 60px;
+  h1, h6 time{
+    color: $navy;
+    font-weight: 300;
+  }
+}
+
+.blog-content{
+  padding: 30px 60px;
+}
+.full .blog-content p{
+  font-size: 19px;
+}
+
+.blog-header{
+  background: url("../img/header-blog.jpg");
+  background-size: cover;
+  background-position: center center;
+  .columns{
+    min-height: 1px;
+  }
+}

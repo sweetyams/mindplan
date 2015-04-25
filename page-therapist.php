@@ -3,6 +3,7 @@
 Template Name: Therapist Home
 */
 get_header("home"); 
+if ( have_posts() ) :
 while (have_posts()) : the_post(); 
 $url = get_template_directory_uri();
 ?>
@@ -211,6 +212,7 @@ is a Canada registered trademark of MindPlan Inc.</p>
 
 <?php 
 endwhile; 
+endif;
 get_footer("home"); 
 ?>
  

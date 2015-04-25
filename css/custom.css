@@ -693,6 +693,8 @@ a {
 
 .button.button-transparent-white {
   background: rgba(255, 255, 255, 0.2); }
+.button.button-transparent-black {
+  background: rgba(35, 35, 35, 0.2); }
 .button.button-gray10 {
   background: #e5e5e5; }
 .button.button-red {
@@ -4160,6 +4162,101 @@ footer.navy .copy {
   border-radius: 2px;
   background: #ADD13E;
   color: white; }
+
+.blogcontainer {
+  height: calc(100% - 70px);
+  max-width: 100%; }
+  .blogcontainer .header {
+    height: 100%;
+    display: block;
+    position: relative;
+    padding: 0; }
+  .blogcontainer .background {
+    margin-left: -1000px;
+    background: #515B65;
+    background: url("../img/header-blog.jpg");
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 1000px;
+    overflow: auto; }
+  .blogcontainer .content {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    float: right;
+    max-width: 360px; }
+  .blogcontainer .connect {
+    position: absolute;
+    bottom: 20px;
+    width: 90%; }
+  .blogcontainer h1 {
+    color: white;
+    margin: 0;
+    font-weight: 500;
+    font-size: 70px;
+    letter-spacing: .1em; }
+  .blogcontainer .social {
+    color: white;
+    display: inline-block;
+    opacity: 1; }
+  .blogcontainer .blog-content {
+    padding: 0;
+    height: 100%;
+    overflow: scroll; }
+  .blogcontainer article {
+    padding: 60px 35px;
+    border-top: 1px solid #f1f1f1;
+    position: relative; }
+    .blogcontainer article h2 a {
+      text-transform: uppercase;
+      color: #515B65;
+      font-weight: 300; }
+    .blogcontainer article h6 time {
+      color: #a5a5a5; }
+    .blogcontainer article p {
+      margin-bottom: 0; }
+    .blogcontainer article .slidehover {
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 100%;
+      background: #f2f2f2;
+      -webkit-transition: all ease-in-out 0.3s;
+      -moz-transition: all ease-in-out 0.3s;
+      -ms-transition: all ease-in-out 0.3s;
+      -o-transition: all ease-in-out 0.3s;
+      transition: all ease-in-out 0.3s; }
+    .blogcontainer article:hover .slidehover {
+      width: 100%;
+      margin-left: 0; }
+    .blogcontainer article .article-content {
+      position: relative; }
+
+.blog-title {
+  padding: 60px; }
+  .blog-title h1, .blog-title h6 time {
+    color: #515B65;
+    font-weight: 300; }
+
+.blog-content {
+  padding: 30px 60px; }
+
+.full .blog-content p {
+  font-size: 19px; }
+
+.blog-header {
+  background: url("../img/header-blog.jpg");
+  background-size: cover;
+  background-position: center center; }
+  .blog-header .columns {
+    min-height: 1px; }
 
 @media only screen {
   /* 0, 640px */

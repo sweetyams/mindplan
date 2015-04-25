@@ -133,6 +133,9 @@ a{
   &.button-transparent-white{
     background: rgba($white,.2);
   }
+  &.button-transparent-black{
+    background: rgba($black,.2);
+  }
   &.button-gray10{
     background: $gray10;
   }
