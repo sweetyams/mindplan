@@ -1,7 +1,4 @@
 <?php
-/*
-Template Name: Secondary Pages
-*/
 get_header("home"); 
 $url = get_template_directory_uri();
 ?>
