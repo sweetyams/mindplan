@@ -63,6 +63,25 @@ $url = get_template_directory_uri();
 </div>
 		
 
+<footer class="full navy">
+  <div class="row top-150 bottom-100">
+    <div class="columns small-6 center">
+      
+      <p class="mail"><a class="logo" href="/"><span class="i-mp_icon"></span></a><a href="mailto:hello@mindplan.me" target="_blank">hello@mindplan.me</a></p>
+      <p class="copy top-30">Copyright © 2014 MindPlan Inc. <br>
+All rights reserved.  Canada patents pending MindScan <br>
+is a Canada registered trademark of MindPlan Inc.</p>
+    </div>
+    <div class="columns small-3">
+      <?php dynamic_sidebar("Footer Left"); ?>
+    </div>
+    <div class="columns small-3">
+      <?php dynamic_sidebar("Footer Right"); ?>
+    </div>
+    
+  </div>
+</footer>
+
 
 <?php 
 get_footer("home"); 
