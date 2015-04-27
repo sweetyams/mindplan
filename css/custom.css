@@ -70,21 +70,25 @@
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0); }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+
 @keyframes fadeInRight {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     -ms-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0); }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; } }
+
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight; }
@@ -94,21 +98,25 @@
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     -ms-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; } }
+
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft; }
@@ -116,18 +124,22 @@
 @-webkit-keyframes fadeOutLeft {
   0% {
     opacity: 1; }
+
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); } }
+
 @keyframes fadeOutLeft {
   0% {
     opacity: 1; }
+
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     -ms-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); } }
+
 .fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft; }
@@ -135,18 +147,22 @@
 @-webkit-keyframes fadeOutRight {
   0% {
     opacity: 1; }
+
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0); } }
+
 @keyframes fadeOutRight {
   0% {
     opacity: 1; }
+
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     -ms-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0); } }
+
 .fadeOutRight {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight; }
@@ -156,19 +172,23 @@
     opacity: 0;
     -webkit-transform: translate3d(0, 20%, 0);
     transform: translate3d(0, 20%, 0); }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 12%, 0);
     transform: translate3d(0, 20%, 0); }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp; }
@@ -229,15 +249,19 @@
     opacity: 0;
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9); }
+
   100% {
     opacity: 1; } }
+
 @keyframes zoomIn {
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9); }
+
   100% {
     opacity: 1; } }
+
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn; }
@@ -245,18 +269,22 @@
 @-webkit-keyframes zoomOut {
   0% {
     opacity: 1; }
+
   100% {
     opacity: 0;
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9); } }
+
 @keyframes zoomOut {
   0% {
     opacity: 1; }
+
   100% {
     opacity: 0;
     visibility: hidden;
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9); } }
+
 .zoomOut {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut; }
@@ -264,13 +292,17 @@
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
+
   50% {
     opacity: 1; } }
+
 @keyframes fadeIn {
   0% {
     opacity: 0; }
+
   50% {
     opacity: 1; } }
+
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
@@ -278,17 +310,23 @@
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1; }
+
   50% {
     opacity: 0; }
+
   100% {
     opacity: 0; } }
+
 @keyframes fadeOut {
   0% {
     opacity: 1; }
+
   50% {
     opacity: 0; }
+
   100% {
     opacity: 0; } }
+
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: zoomOut; }
@@ -296,35 +334,47 @@
 @-webkit-keyframes fadeInOut {
   0% {
     opacity: 0; }
+
   10% {
     opacity: 1; }
+
   90% {
     opacity: 1; }
+
   100% {
     opacity: 0; } }
+
 @keyframes fadeInOut {
   0% {
     opacity: 0; }
+
   10% {
     opacity: 1; }
+
   90% {
     opacity: 1; }
+
   100% {
     opacity: 0; } }
+
 @-webkit-keyframes slideUp {
   0% {
     opacity: 1;
     height: 68px; }
+
   100% {
     opacity: 0;
     height: 0; } }
+
 @keyframes slideUp {
   0% {
     opacity: 1;
     height: 68px; }
+
   100% {
     opacity: 0;
     height: 0; } }
+
 .slideUp {
   -webkit-animation-name: slideUp;
   animation-name: slideUp; }
@@ -332,59 +382,77 @@
 @-webkit-keyframes shareLink {
   0% {
     opacity: 0; }
+
   30% {
     opacity: 1;
     top: -40px; }
+
   60% {
     opacity: 1;
     top: -40px; }
+
   100% {
     opacity: 0;
     top: -150px; } }
+
 @keyframes shareLink {
   0% {
     opacity: 0; }
+
   30% {
     opacity: 1;
     top: -40px; }
+
   60% {
     opacity: 1;
     top: -40px; }
+
   100% {
     opacity: 0;
     top: -150px; } }
+
 @-webkit-keyframes flashInOut {
   0% {
     height: 0;
     opacity: 0; }
+
   20% {
     height: 0;
     opacity: 0; }
+
   40% {
     height: 50px;
     opacity: 1; }
+
   90% {
     height: 50px;
     opacity: 1; }
+
   100% {
     height: 0;
     opacity: 0; } }
+
 @keyframes flashInOut {
   0% {
     height: 0;
     opacity: 0; }
+
   20% {
     height: 0;
     opacity: 0; }
+
   40% {
     height: 50px;
     opacity: 1; }
+
   90% {
     height: 50px;
     opacity: 1; }
+
   100% {
     height: 0;
     opacity: 0; } }
+
 /**
  * @license
  * MyFonts Webfont Build ID 2878341, 2014-09-05T22:30:43-0400
@@ -411,12 +479,14 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @font-face {
   font-family: 'BrandonText-Light';
-  src: url("webfonts/2BEB85_0_0.eot");
-  src: url("webfonts/2BEB85_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2BEB85_0_0.woff") format("woff"), url("webfonts/2BEB85_0_0.ttf") format("truetype"); }
+  src: url('webfonts/2BEB85_0_0.eot');
+  src: url('webfonts/2BEB85_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/2BEB85_0_0.woff') format('woff'), url('webfonts/2BEB85_0_0.ttf') format('truetype'); }
+
 @font-face {
   font-family: 'BrandonText-Regular';
-  src: url("webfonts/2BEB85_1_0.eot");
-  src: url("webfonts/2BEB85_1_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2BEB85_1_0.woff") format("woff"), url("webfonts/2BEB85_1_0.ttf") format("truetype"); }
+  src: url('webfonts/2BEB85_1_0.eot');
+  src: url('webfonts/2BEB85_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/2BEB85_1_0.woff') format('woff'), url('webfonts/2BEB85_1_0.ttf') format('truetype'); }
+
 body, h1, h2, h3, h4, h5, h6 {
   font-family: BrandonText-Light, "proxima-nova", sans-serif;
   font-weight: normal;
@@ -595,14 +665,10 @@ a {
 form {
   margin-bottom: 0; }
 
-*::-webkit-input-placeholder,
-*:-moz-placeholder,
-*::-moz-placeholder,
-*:-ms-input-placeholder {
+*::-webkit-input-placeholder, *:-moz-placeholder, *::-moz-placeholder, *:-ms-input-placeholder {
   color: #a5a5a5; }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
@@ -3139,13 +3205,17 @@ h6.ng-hide-add {
 @-webkit-keyframes moveSlideshow {
   0% {
     left: 0; }
+
   100% {
     left: -1482px; } }
+
 @-moz-keyframes moveSlideshow {
   0% {
     left: 0; }
+
   100% {
     left: -1482px; } }
+
 /*
  * Table styles
  */
@@ -3157,153 +3227,103 @@ table.dataTable {
   border-spacing: 0px 6px;
   text-align: left;
   /*
-   * Header and footer styles
-   */
+     * Header and footer styles
+     */
   /*
-   * Body styles
-   */ }
-  table.dataTable thead th,
-  table.dataTable tfoot th {
+     * Body styles
+     */ }
+  table.dataTable thead th, table.dataTable tfoot th {
     font-weight: bold;
     text-transform: uppercase;
     color: #a5a5a5;
     font-size: 12px; }
-  table.dataTable thead th,
-  table.dataTable thead td {
+  table.dataTable thead th, table.dataTable thead td {
     padding: 6px 40px;
     border-bottom: none #111111; }
-    table.dataTable thead th:active,
-    table.dataTable thead td:active {
+    table.dataTable thead th:active, table.dataTable thead td:active {
       outline: none; }
-  table.dataTable tfoot th,
-  table.dataTable tfoot td {
+  table.dataTable tfoot th, table.dataTable tfoot td {
     padding: 10px 18px 6px 18px;
     border-top: none #111111; }
-  table.dataTable thead .sorting_asc,
-  table.dataTable thead .sorting_desc,
-  table.dataTable thead .sorting {
+  table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting {
     cursor: pointer;
     *cursor: hand; }
   table.dataTable thead .sorting {
-    background: url("../images/sort_both.png") no-repeat center right; }
+    background: url('../images/sort_both.png') no-repeat center right; }
   table.dataTable thead .sorting_asc {
     color: #66A0D2; }
   table.dataTable thead .sorting_desc {
-    background: url("../images/sort_desc.png") no-repeat center right; }
+    background: url('../images/sort_desc.png') no-repeat center right; }
   table.dataTable thead .sorting_asc_disabled {
-    background: url("../images/sort_asc_disabled.png") no-repeat center right; }
+    background: url('../images/sort_asc_disabled.png') no-repeat center right; }
   table.dataTable thead .sorting_desc_disabled {
-    background: url("../images/sort_desc_disabled.png") no-repeat center right; }
+    background: url('../images/sort_desc_disabled.png') no-repeat center right; }
   table.dataTable tbody tr {
     background-color: #ffffff;
     cursor: pointer; }
     table.dataTable tbody tr.selected {
       background-color: #66A0D2; }
-  table.dataTable tbody th,
-  table.dataTable tbody td {
+  table.dataTable tbody th, table.dataTable tbody td {
     padding: 20px 40px; }
   table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
     border-top: px none #dddddd; }
-  table.dataTable.row-border tbody tr:first-child th,
-  table.dataTable.row-border tbody tr:first-child td, table.dataTable.display tbody tr:first-child th,
-  table.dataTable.display tbody tr:first-child td {
+  table.dataTable.row-border tbody tr:first-child th, table.dataTable.row-border tbody tr:first-child td, table.dataTable.display tbody tr:first-child th, table.dataTable.display tbody tr:first-child td {
     border-top: none; }
   table.dataTable.cell-border tbody th, table.dataTable.cell-border tbody td {
     border-top: px none #dddddd;
     border-right: px none #dddddd; }
-  table.dataTable.cell-border tbody tr th:first-child,
-  table.dataTable.cell-border tbody tr td:first-child {
+  table.dataTable.cell-border tbody tr th:first-child, table.dataTable.cell-border tbody tr td:first-child {
     border-left: px none #dddddd; }
-  table.dataTable.cell-border tbody tr:first-child th,
-  table.dataTable.cell-border tbody tr:first-child td {
+  table.dataTable.cell-border tbody tr:first-child th, table.dataTable.cell-border tbody tr:first-child td {
     border-top: none; }
-  table.dataTable.hover tbody tr:hover,
-  table.dataTable.hover tbody tr.odd:hover,
-  table.dataTable.hover tbody tr.even:hover, table.dataTable.display tbody tr:hover,
-  table.dataTable.display tbody tr.odd:hover,
-  table.dataTable.display tbody tr.even:hover {
+  table.dataTable.hover tbody tr:hover, table.dataTable.hover tbody tr.odd:hover, table.dataTable.hover tbody tr.even:hover, table.dataTable.display tbody tr:hover, table.dataTable.display tbody tr.odd:hover, table.dataTable.display tbody tr.even:hover {
     background-color: #66A0D2;
     color: white; }
-    table.dataTable.hover tbody tr:hover.selected,
-    table.dataTable.hover tbody tr.odd:hover.selected,
-    table.dataTable.hover tbody tr.even:hover.selected, table.dataTable.display tbody tr:hover.selected,
-    table.dataTable.display tbody tr.odd:hover.selected,
-    table.dataTable.display tbody tr.even:hover.selected {
+    table.dataTable.hover tbody tr:hover.selected, table.dataTable.hover tbody tr.odd:hover.selected, table.dataTable.hover tbody tr.even:hover.selected, table.dataTable.display tbody tr:hover.selected, table.dataTable.display tbody tr.odd:hover.selected, table.dataTable.display tbody tr.even:hover.selected {
       background-color: #66A0D2;
       color: white; }
   table.dataTable.no-footer {
     border-bottom: none #111111; }
   table.dataTable.nowrap th, table.dataTable.nowrap td {
     white-space: nowrap; }
-  table.dataTable.compact thead th,
-  table.dataTable.compact thead td {
+  table.dataTable.compact thead th, table.dataTable.compact thead td {
     padding: 5px 9px; }
-  table.dataTable.compact tfoot th,
-  table.dataTable.compact tfoot td {
+  table.dataTable.compact tfoot th, table.dataTable.compact tfoot td {
     padding: 5px 9px 3px 9px; }
-  table.dataTable.compact tbody th,
-  table.dataTable.compact tbody td {
+  table.dataTable.compact tbody th, table.dataTable.compact tbody td {
     padding: 4px 5px; }
-  table.dataTable th.dt-left,
-  table.dataTable td.dt-left {
+  table.dataTable th.dt-left, table.dataTable td.dt-left {
     text-align: left; }
-  table.dataTable th.dt-center,
-  table.dataTable td.dt-center,
-  table.dataTable td.dataTables_empty {
+  table.dataTable th.dt-center, table.dataTable td.dt-center, table.dataTable td.dataTables_empty {
     text-align: center; }
-  table.dataTable th.dt-right,
-  table.dataTable td.dt-right {
+  table.dataTable th.dt-right, table.dataTable td.dt-right {
     text-align: right; }
-  table.dataTable th.dt-justify,
-  table.dataTable td.dt-justify {
+  table.dataTable th.dt-justify, table.dataTable td.dt-justify {
     text-align: justify; }
-  table.dataTable th.dt-nowrap,
-  table.dataTable td.dt-nowrap {
+  table.dataTable th.dt-nowrap, table.dataTable td.dt-nowrap {
     white-space: nowrap; }
-  table.dataTable thead th.dt-head-left,
-  table.dataTable thead td.dt-head-left,
-  table.dataTable tfoot th.dt-head-left,
-  table.dataTable tfoot td.dt-head-left {
+  table.dataTable thead th.dt-head-left, table.dataTable thead td.dt-head-left, table.dataTable tfoot th.dt-head-left, table.dataTable tfoot td.dt-head-left {
     text-align: left; }
-  table.dataTable thead th.dt-head-center,
-  table.dataTable thead td.dt-head-center,
-  table.dataTable tfoot th.dt-head-center,
-  table.dataTable tfoot td.dt-head-center {
+  table.dataTable thead th.dt-head-center, table.dataTable thead td.dt-head-center, table.dataTable tfoot th.dt-head-center, table.dataTable tfoot td.dt-head-center {
     text-align: center; }
-  table.dataTable thead th.dt-head-right,
-  table.dataTable thead td.dt-head-right,
-  table.dataTable tfoot th.dt-head-right,
-  table.dataTable tfoot td.dt-head-right {
+  table.dataTable thead th.dt-head-right, table.dataTable thead td.dt-head-right, table.dataTable tfoot th.dt-head-right, table.dataTable tfoot td.dt-head-right {
     text-align: right; }
-  table.dataTable thead th.dt-head-justify,
-  table.dataTable thead td.dt-head-justify,
-  table.dataTable tfoot th.dt-head-justify,
-  table.dataTable tfoot td.dt-head-justify {
+  table.dataTable thead th.dt-head-justify, table.dataTable thead td.dt-head-justify, table.dataTable tfoot th.dt-head-justify, table.dataTable tfoot td.dt-head-justify {
     text-align: justify; }
-  table.dataTable thead th.dt-head-nowrap,
-  table.dataTable thead td.dt-head-nowrap,
-  table.dataTable tfoot th.dt-head-nowrap,
-  table.dataTable tfoot td.dt-head-nowrap {
+  table.dataTable thead th.dt-head-nowrap, table.dataTable thead td.dt-head-nowrap, table.dataTable tfoot th.dt-head-nowrap, table.dataTable tfoot td.dt-head-nowrap {
     white-space: nowrap; }
-  table.dataTable tbody th.dt-body-left,
-  table.dataTable tbody td.dt-body-left {
+  table.dataTable tbody th.dt-body-left, table.dataTable tbody td.dt-body-left {
     text-align: left; }
-  table.dataTable tbody th.dt-body-center,
-  table.dataTable tbody td.dt-body-center {
+  table.dataTable tbody th.dt-body-center, table.dataTable tbody td.dt-body-center {
     text-align: center; }
-  table.dataTable tbody th.dt-body-right,
-  table.dataTable tbody td.dt-body-right {
+  table.dataTable tbody th.dt-body-right, table.dataTable tbody td.dt-body-right {
     text-align: right; }
-  table.dataTable tbody th.dt-body-justify,
-  table.dataTable tbody td.dt-body-justify {
+  table.dataTable tbody th.dt-body-justify, table.dataTable tbody td.dt-body-justify {
     text-align: justify; }
-  table.dataTable tbody th.dt-body-nowrap,
-  table.dataTable tbody td.dt-body-nowrap {
+  table.dataTable tbody th.dt-body-nowrap, table.dataTable tbody td.dt-body-nowrap {
     white-space: nowrap; }
 
-table.dataTable,
-table.dataTable th,
-table.dataTable td {
+table.dataTable, table.dataTable th, table.dataTable td {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
@@ -3408,27 +3428,21 @@ table.dataTable td {
     /* Opera 11.10+ */
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
     /* W3C */ }
-  .dataTables_wrapper .dataTables_length,
-  .dataTables_wrapper .dataTables_filter,
-  .dataTables_wrapper .dataTables_info,
-  .dataTables_wrapper .dataTables_processing,
-  .dataTables_wrapper .dataTables_paginate {
+  .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
     color: #333333; }
   .dataTables_wrapper .dataTables_scroll {
     clear: both; }
     .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
       *margin-top: -1px;
       -webkit-overflow-scrolling: touch; }
-      .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody th > div.dataTables_sizing,
-      .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody td > div.dataTables_sizing {
+      .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody th > div.dataTables_sizing, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody td > div.dataTables_sizing {
         height: 0;
         overflow: hidden;
         margin: 0 !important;
         padding: 0 !important; }
   .dataTables_wrapper.no-footer .dataTables_scrollBody {
     border-bottom: none #111111; }
-  .dataTables_wrapper.no-footer div.dataTables_scrollHead table,
-  .dataTables_wrapper.no-footer div.dataTables_scrollBody table {
+  .dataTables_wrapper.no-footer div.dataTables_scrollHead table, .dataTables_wrapper.no-footer div.dataTables_scrollBody table {
     border-bottom: none; }
   .dataTables_wrapper:after {
     visibility: hidden;
@@ -3438,22 +3452,21 @@ table.dataTable td {
     height: 0; }
 
 @media screen and (max-width: 767px) {
-  .dataTables_wrapper .dataTables_info,
-  .dataTables_wrapper .dataTables_paginate {
+  .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_paginate {
     float: none;
     text-align: center; }
   .dataTables_wrapper .dataTables_paginate {
     margin-top: 0.5em; } }
+
 @media screen and (max-width: 640px) {
-  .dataTables_wrapper .dataTables_length,
-  .dataTables_wrapper .dataTables_filter {
+  .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter {
     float: none;
     text-align: center; }
   .dataTables_wrapper .dataTables_filter {
     margin-top: 0.5em; } }
+
 /* Make clicks pass-through */
-#loading-bar,
-#loading-bar-spinner {
+#loading-bar, #loading-bar-spinner {
   pointer-events: none;
   -webkit-pointer-events: none;
   -webkit-transition: 350ms linear all;
@@ -3461,16 +3474,10 @@ table.dataTable td {
   -o-transition: 350ms linear all;
   transition: 350ms linear all; }
 
-#loading-bar.ng-enter,
-#loading-bar.ng-leave.ng-leave-active,
-#loading-bar-spinner.ng-enter,
-#loading-bar-spinner.ng-leave.ng-leave-active {
+#loading-bar.ng-enter, #loading-bar.ng-leave.ng-leave-active, #loading-bar-spinner.ng-enter, #loading-bar-spinner.ng-leave.ng-leave-active {
   opacity: 0; }
 
-#loading-bar.ng-enter.ng-enter-active,
-#loading-bar.ng-leave,
-#loading-bar-spinner.ng-enter.ng-enter-active,
-#loading-bar-spinner.ng-leave {
+#loading-bar.ng-enter.ng-enter-active, #loading-bar.ng-leave, #loading-bar-spinner.ng-enter.ng-enter-active, #loading-bar-spinner.ng-leave {
   opacity: 1; }
 
 #loading-bar .bar {
@@ -3524,37 +3531,47 @@ table.dataTable td {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
+
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @-moz-keyframes loading-bar-spinner {
   0% {
     -moz-transform: rotate(0deg);
     transform: rotate(0deg); }
+
   100% {
     -moz-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @-o-keyframes loading-bar-spinner {
   0% {
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
+
   100% {
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @-ms-keyframes loading-bar-spinner {
   0% {
     -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
+
   100% {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @keyframes loading-bar-spinner {
   0% {
     transform: rotate(0deg);
     transform: rotate(0deg); }
+
   100% {
     transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 .menu-home a {
   color: white;
   font-weight: 600;
@@ -3652,7 +3669,7 @@ table.dataTable td {
 .hero-client, .hero-therapist {
   background: url("../img/header-client.jpg");
   background-size: cover;
-  height: 95svh; }
+  height: 95vh; }
   .hero-client h1, .hero-therapist h1 {
     color: white;
     font-weight: 500;
@@ -3903,13 +3920,17 @@ h1, h2, h3, h4, h5, h6 {
 @-webkit-keyframes moveSlideshow {
   0% {
     left: 0; }
+
   100% {
     left: -1482px; } }
+
 @-moz-keyframes moveSlideshow {
   0% {
     left: 0; }
+
   100% {
     left: -1482px; } }
+
 ::-webkit-input-placeholder {
   color: white; }
 
@@ -4096,19 +4117,14 @@ footer.navy .copy {
   .blog-header .columns {
     min-height: 1px; }
 
-@media only screen {
-  /* 0, 640px */
-  /* END0, 640px */ }
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width:40.063em) {
   /* 641px, 1024px */
   .menu-top {
     text-align: center; }
     .menu-top .logo span {
       font-size: 26px; }
-
   .home .menu-top .homelink {
     display: block; }
-
   .home-header {
     height: 600px; }
     .home-header h1 {
@@ -4116,13 +4132,12 @@ footer.navy .copy {
       margin-top: 140px; }
     .home-header p {
       margin: 30px 0; }
-
   /* END 641px, 1024px */ }
-@media only screen and (min-width: 64.063em) {
+
+@media only screen and (min-width:64.063em) {
   /* 1025px, 1440px */
   .menu-top .logo span {
     font-size: 32px; }
-
   .home-header {
     height: 700px; }
     .home-header h1 {
@@ -4130,8 +4145,5 @@ footer.navy .copy {
       margin-top: 180px; }
     .home-header p {
       margin: 40px 0; }
-
   /* END 1025px, 1440px */ }
-@media only screen and (min-width: 90.063em) {
-  /* 1441px, 1920px */
-  /* END 1441px, 1920px */ }
+
