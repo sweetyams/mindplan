@@ -39,7 +39,7 @@ $url = get_template_directory_uri();
 <div class="row">
   <div class="columns small-12 center top-100 bottom-100">
     <h6 class="bottom-30">HOW IT WORKS</h6>
-    <h1>IF YOU ARE GOING TO WORK WITH THE HUMAN MIND<br>YOU BETTER HAVE A POWERFUL SUITE OF TOOLS </h1>
+    <h1>IF YOU ARE GOING TO WORK WITH THE HUMAN MIND YOU BETTER HAVE A POWERFUL SUITE OF TOOLS </h1>
 
     <ul class="features top-30">
       <li>
