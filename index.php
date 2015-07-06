@@ -14,7 +14,7 @@ $url = get_template_directory_uri();
       <ul class="nav">
            <li class="link"><a href="/client">Clients</a></li>
            <li class="link"><a href="/client">Therapists</a></li>
-           <li class="link"><a href="/blog">Blog</a></li>
+           <li class="link"><a href="/journal">Journal</a></li>
       </ul>
 
       <a class="logo center" href="/"><span class="i-mp_icon"></span></a> 
@@ -32,7 +32,7 @@ $url = get_template_directory_uri();
 <div class="full gray5 top-100 bottom-100">
   <div class="row">
     <div class="small-12 small-centered columns">
-      <h2 class="blogs-title">Articles</h2>
+      <h2 class="blogs-title">Journal</h2>
 
       <div class="connect right">
       <?php echo do_shortcode("[mc4wp_form id='68']"); ?>
