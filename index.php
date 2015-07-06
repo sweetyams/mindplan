@@ -29,36 +29,37 @@ $url = get_template_directory_uri();
 </div>
 </div>
 
-<div class="row blogcontainer">
-  <div class="columns small-4 header">
-    <div class="background">
-      <div class="content">
+<div class="full gray5 top-100 bottom-100">
+  <div class="row">
+    <div class="small-12 small-centered columns">
+      <h2 class="blogs-title">Articles</h2>
 
-    <h1 class="top-150">BLOG</h1>
-    <ul>
-      <li class="social"><a href="https://twitter.com/mymindplan" target="_blank"><span class="i-twitter"></span></a></li>
-      <li class="social"><a href="https://facebook.com/mymindplan" target="_blank"><span class="i-facebook"></span></a></li>
-    </ul>
-
-    <div class="connect">
+      <div class="connect right">
       <?php echo do_shortcode("[mc4wp_form id='68']"); ?>
     </div>
-      </div>
     </div>
   </div>
+</div>
 
-  <div class="columns small-8 end top-100 blog-content">
+<div class="white">
+  <div class="row">
+    <div class="columns small-12 small-centered end top-60 bottom-100">
 
-    <?php if ( have_posts() ) : ?>
-      <?php while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( 'content', get_post_format() ); ?>
-      <?php endwhile; ?>
-    
-    <?php else : ?>
-      <?php get_template_part( 'content', 'none' ); ?>
-    
-    <?php endif; // end have_posts() check ?>
 
+<?php $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts ORDER BY post_date DESC"); ?>
+<?php foreach($years as $year) : ?>
+    <h2 class="blog-year"><?php echo $year; ?></h2>
+
+    <ul>
+      <?php query_posts('year='.$year); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+         <?php get_template_part( 'content', get_post_format() ); ?>
+      <?php endwhile; endif; ?>
+    </ul>
+<?php endforeach; ?>
+
+
+    </div>
   </div>
 </div>
 		

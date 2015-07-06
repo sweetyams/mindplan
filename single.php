@@ -49,11 +49,17 @@ $url = get_template_directory_uri();
     </div>
   </div>
 </div>
+<div class="full gray5 bottom-20">
+  <div class="row">
+    <div class="small-8 small-centered columns white blog-content bottom-30">
+      <?php the_content(); ?>
+    </div>
+  </div>
+</div>
 <div class="full gray5 bottom-150">
   <div class="row">
     <div class="small-8 small-centered columns white blog-content">
-      <?php the_content(); ?>
-      <?php // comments_template(); ?>
+      <?php comments_template(); ?>
     </div>
   </div>
 </div>

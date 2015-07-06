@@ -69,6 +69,10 @@
   text-transform: uppercase;
 }
 
+.blogs-title{
+    padding-top: 9px;
+}
+
 .emailbox, .phonebox{
    padding: 23px 30px 20px 30px;
   border-radius: 2px;
@@ -409,21 +413,21 @@ h1,h2,h3,h4,h5,h6{
     100% { left: -1482px; }
 }
 
-::-webkit-input-placeholder {
-   color: white;
-}
+// ::-webkit-input-placeholder {
+//    color: white;
+// }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: white;
-}
+// :-moz-placeholder { /* Firefox 18- */
+//    color: white;
+// }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: white;
-}
+// ::-moz-placeholder {  /* Firefox 19+ */
+//    color: white;
+// }
 
-:-ms-input-placeholder {  
-   color: white;
-}
+// :-ms-input-placeholder {  
+//    color: white;
+// }
 
 
 .input{
@@ -435,8 +439,8 @@ h1,h2,h3,h4,h5,h6{
     background: rgba(35, 35, 35, .1);
     color: white;
     @include text;
-    font-size: 20px;
-    height: 70px;
+    font-size: 15px;
+    height: 60px;
     border-radius: 2px;
   }
   input[type="email"]:focus{
@@ -446,7 +450,9 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     right: 7px;
     top: 7px;
-    height: 56px;
+    height: 46px;
+    font-size: 10px;
+    font-weight: 600;
   }
 }
 
@@ -522,6 +528,24 @@ footer.navy{
   color: white;
 }
 
+  .connect{
+    position: absolute;
+    right: 0;
+    top: 0;
+    .input input[type="email"] {
+      width: 440px;
+      box-shadow: none;
+      border: none;
+      background-color: white;
+      color: $navy;
+    }
+  }
+
+.blog-year{
+  color: $gray10;
+}
+
+
 .blogcontainer{
   height: calc(100% - 70px);
   max-width: 100%;
@@ -552,11 +576,7 @@ footer.navy{
     float: right;
     max-width: 360px;
   }
-  .connect{
-    position: absolute;
-    bottom: 20px;
-    width: 90%;
-  }
+
   h1{
     color: white;
     margin:0;
@@ -573,6 +593,7 @@ footer.navy{
     padding: 0;
     height: 100%;
     overflow: scroll;
+
   }
   article{
     padding: 60px 35px;
@@ -625,6 +646,27 @@ footer.navy{
   font-size: 19px;
 }
 
+.updated{
+  font-weight: 400;
+  color: $gray20;
+}
+
+.article-content{
+    padding: 20px 0;
+  border-bottom: 1px solid $gray5;
+  h2{
+    text-transform: none;
+  }
+  a{
+    color: $navy;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  h6{
+    color: $gray20;
+  }
+}
+
 .blog-header{
   background: url("../img/header-blog.jpg");
   background-size: cover;
@@ -632,4 +674,9 @@ footer.navy{
   .columns{
     min-height: 1px;
   }
+}
+
+h2{
+  text-transform: uppercase;
+  font-weight: 300;
 }
