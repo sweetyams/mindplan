@@ -11,7 +11,7 @@ $url = get_template_directory_uri();
       <ul class="nav">
            <li class="link"><a href="/client">Clients</a></li>
            <li class="link"><a href="/client">Therapists</a></li>
-           <li class="link"><a href="/blog">Blog</a></li>
+           <li class="link"><a href="/journal">Journal</a></li>
       </ul>
 
       <a class="logo center" href="/"><span class="i-mp_icon"></span></a> 
