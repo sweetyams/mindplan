@@ -4374,6 +4374,10 @@ footer.navy .copy {
     color: #515B65;
     font-weight: 300; }
 
+h6.time {
+  color: #a5a5a5;
+  font-weight: 300; }
+
 .blog-content {
   padding: 30px 60px; }
 
