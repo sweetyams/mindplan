@@ -5,6 +5,11 @@ font-family: "brandon-grotesque", BrandonText-Regular, "proxima-nova", sans-seri
 font-style: normal;
 }
 
+@mixin freight{
+  font-family: "freight-text-pro",sans-serif;
+  font-style: normal;
+}
+
 @mixin text { 
   font-family: BrandonText-Light, "proxima-nova", sans-serif;
   font-weight: normal;

@@ -5,21 +5,27 @@
 			<header class="comment-author">
 				<?php // echo get_avatar($comment,$size='48'); ?>
 				<div class="author-meta">
-					<?php printf(__('<cite class="fn">%s</cite>', 'reverie'), get_comment_author_link()) ?>, on 
-					<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s', 'reverie'), get_comment_date(),  get_comment_time()) ?></a></time>
-					<?php edit_comment_link(__('(Edit)', 'reverie'), '', '') ?>
+					<h6 class="author"><?php printf(__('%s', 'reverie'), get_comment_author_link()) ?><span> •  
+					<?php
+if ( get_comment_time('U') > date('U') - 7*60*60*24 ) {
+echo human_time_diff( get_comment_time('U'), current_time('timestamp') ) . ' ago';
+} elseif ( get_comment_date('Y') == date('Y') ) {
+comment_date('F j');
+} else {
+comment_date('F j, Y');
+} ?></span><?php edit_comment_link(__(' • Edit', 'reverie'), '', '') ?></h6>
+					<h6 class="reply"><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></h6>
 				</div>
 			</header>
 			
 			<?php if ($comment->comment_approved == '0') : ?>
        			<div class="notice">
-					<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'reverie') ?></p>
+					<h6><?php _e('Your comment is awaiting moderation.', 'reverie') ?><h6>
           		</div>
 			<?php endif; ?>
 			
-			<section class="comment">
+			<section class="comment-text">
 				<?php comment_text() ?>
-				<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 			</section>
 
 		</article>
@@ -43,9 +49,12 @@
 <?php // You can start editing here. Customize the respond form below ?>
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
-		<h4 class="center top-10 bottom-20"><?php comments_number(__('No Responses', 'reverie'), __('One Response', 'reverie'), __('% Responses', 'reverie') ); ?></h4>
+  <div class="comment-count">
+		<h6 class="count left">Comments<span><?php comments_number(__('0', 'reverie'), __('1', 'reverie'), __('%', 'reverie') ); ?></span></h6>
+<!--     <h6 class="showhide right">Hide Comments</h6>
+ -->  </div>
 		<ul class="commentlist">
-		<?php wp_list_comments('type=comment&callback=reverie_comments'); ?>
+		<?php wp_list_comments('type=comment&callback=reverie_comments&max_depth=3'); ?>
 		
 		</ul>
 		<footer>
@@ -66,30 +75,28 @@
 	<?php endif; ?>
 <?php endif; ?>
 <?php if ( comments_open() ) : ?>
-<section id="respond">
-	<h3><?php comment_form_title( __('Leave a Reply', 'reverie'), __('Leave a Reply to %s', 'reverie') ); ?></h3>
-	<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
+<section id="respond" class="comments-respond">
+	
+	<h6 class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></h6>
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 	<p><?php printf( __('You must be <a href="%s">logged in</a> to post a comment.', 'reverie'), wp_login_url( get_permalink() ) ); ?></p>
 	<?php else : ?>
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 		<?php if ( is_user_logged_in() ) : ?>
-		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'reverie'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'reverie'); ?>"><?php _e('Log out &raquo;', 'reverie'); ?></a></p>
+		<h6><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'reverie'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'reverie'); ?>"><?php _e('Log out', 'reverie'); ?></a></p>
 		<?php else : ?>
-		<p>
-			<label for="author"><?php _e('Name', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
-			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
-		</p>
-		<p>
-			<label for="email"><?php _e('Email (will not be published)', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
-			<input type="text" class="five" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
-		</p>
+		</h6>
+    <div class="input">
+			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e('Name', 'reverie'); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
+      </div>
+      <div class="input">
+			<input type="text" class="five" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e('Email (will not be published)', 'reverie'); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
+      </div>
 		<?php endif; ?>
-		<p>
-			<label for="comment"><?php _e('Comment', 'reverie'); ?></label>
-			<textarea name="comment" id="comment" tabindex="4"></textarea>
-		</p>
-		<p><input name="submit" class="small radius button" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e('Submit Comment', 'reverie'); ?>"></p>
+		<div class="input">
+			<textarea name="comment" id="comment" placeholder="<?php _e('Comment', 'reverie'); ?>" tabindex="4"></textarea>
+		</div>
+		<input name="submit" class="button small button-teal text-white" type="submit" id="submit" tabindex="5" value="<?php esc_attr_e('Submit Comment', 'reverie'); ?>">
 		<?php comment_id_fields(); ?>
 		<?php do_action('comment_form', $post->ID); ?>
 	</form>

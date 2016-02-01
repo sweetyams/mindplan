@@ -56,7 +56,7 @@ if( ! function_exists( 'reverie_theme_support' ) ) {
         add_theme_support('automatic-feed-links');
 
         // Add post formats support. http://codex.wordpress.org/Post_Formats
-        add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+        // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
         // Add menu support. http://codex.wordpress.org/Function_Reference/register_nav_menus
         add_theme_support('menus');
@@ -122,4 +122,8 @@ if ( ! function_exists( 'reverie_entry_meta' ) ) {
         echo '<h6 class="time">' . get_the_author() .', <time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time></h6>';
     }
 };
+
+
+
+
 ?>

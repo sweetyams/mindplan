@@ -141,6 +141,10 @@ if( ! function_exists( 'reverie_scripts_and_styles ' ) ) {
 	    if ($is_IE) {
 	       wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
 	    }
+      wp_register_script( 'autosize', get_template_directory_uri() . '/js/autosize.min.js', array( 'jquery' ), '', true );
+
+      wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), '', true );
+
 
 	    // enqueue styles and scripts
 	    wp_enqueue_script( 'reverie-modernizr' );
@@ -155,6 +159,8 @@ if( ! function_exists( 'reverie_scripts_and_styles ' ) ) {
 		
 	    wp_enqueue_script( 'reverie-js' );
 	    wp_enqueue_script( 'html5shiv' );
+      wp_enqueue_script( 'autosize' );
+      wp_enqueue_script( 'app' );
 
 	  }
 	}

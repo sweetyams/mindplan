@@ -1,24 +1,19 @@
 <?php
+/*
+Template Name: Blog
+*/
 
 get_header("home"); 
 $url = get_template_directory_uri();
 ?>
 
-<?php
-  $category = get_the_category();
-  $cat_name = $category[0]->name;
-  $cat_id = $category[0]->cat_ID;
-  $slug = 'category_' . $cat_id;
-?>
-
 <div class="full-width">
   <div class="small-12 medium-12 large-6 columns nomargin">
-    <div class="full-height home-image" style="background-image:url('<?php the_field('cat_image',$slug); ?>');background-size:cover;">
+    <div class="full-height home-image" style="background-image:url('<?php the_field('background'); ?>');background-size:cover;">
       <div class="home-menu">
         <div class="left">
           <a class="logo center" href="/"><span class="i-mp_icon"></span></a> 
           <h6>Blog</h6>
-
         </div>
         <ul class="social right">
           <li><a target="blank" href="http://facebook.com/myndplan" class="link"><span class="i-facebook"></span></a></li>
@@ -26,10 +21,7 @@ $url = get_template_directory_uri();
           <li><a target="blank" href="http://instagram.com/myndplan" class="link"><span class="i-instagram"></span></a></li>
         </ul>
       </div>
-      <div class="category-header top-150">
-        <h6>CATEGORY</h6>
-        <h1><?=$cat_name?></h1>
-      </div>
+      
       <div class="home-form">
         <div class="panel navy">
         <h3 class="bottom-20">Mental health tips and tricks.<br>Delivered weekly.</h3>
@@ -44,7 +36,7 @@ $url = get_template_directory_uri();
   <div class="posts-all">
     <div class="posts-header">
       <div class="get-categories">
-        <div class="main"><h6><?php echo $category[0]->name; ?><span class="i-mp_l-down"></span></h6></div>
+        <div class="main"><h6>Categories</h6><span class="i-mp_l-down"></span></div>
       <?php
       hierarchical_category_tree( 0 ); // the function call; 0 for all categories; or cat ID  
       function hierarchical_category_tree( $cat ) {
@@ -53,16 +45,9 @@ $url = get_template_directory_uri();
 
         if( $next ) :   
         echo '<ul class="dropdown">'; 
-      echo '<li><a class="' . $all . '" href="/" title="' . sprintf( __( "View all posts in %s" ), $cat->name ) . '" ' . '><h6>All Posts</h6></a></li>'; 
-
           foreach( $next as $cat ) :
-            global $cat_id;
-          
-          if($cat_id == $cat->term_id){
-          } else {
-          echo '<li><a class="' . $active . '" href="' . get_category_link( $cat->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $cat->name ) . '" ' . '><h6>' . $cat->name . '</h6></a></li>'; 
+          echo '<li><a href="' . get_category_link( $cat->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $cat->name ) . '" ' . '><h6>' . $cat->name . '</h6></a></li>'; 
           hierarchical_category_tree( $cat->term_id );
-          }
           endforeach;    
           echo '</ul>'; 
         endif;
@@ -72,10 +57,11 @@ $url = get_template_directory_uri();
     </div>
 
     <ul class="posts-list">
-<?php
-if ( have_posts() ) :
-  while ( have_posts() ) : the_post();
+    <?php
+    $args = array( 'posts_per_page' => 10, );
 
+    $myposts = get_posts( $args );
+    foreach ( $myposts as $post ) : setup_postdata( $post ); 
     $excerpt = get_the_excerpt();
     ?>
       <li>
@@ -90,11 +76,8 @@ if ( have_posts() ) :
           <p> <?php echo $excerpt ?> </p>
           
       </li>
-<?php endwhile;
-else :
-  echo wpautop( 'Sorry, no posts were found' );
-endif;
-?>
+    <?php endforeach; 
+    wp_reset_postdata();?>
 
     </ul>
 
