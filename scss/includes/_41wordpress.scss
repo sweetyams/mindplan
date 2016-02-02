@@ -1244,6 +1244,16 @@ h2{
   }
 }
 
+// AB TESTING
+.blogb{
+  .home-image:before, .single-header:before{
+    background-color: #836edb;
+  }
+  .home-form .panel{
+    background: #836edb;
+  }
+}
+
 @media only screen and (max-width: 64.063em){
   input[type="email"]{
     margin-bottom: 10px;
