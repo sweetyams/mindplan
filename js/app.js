@@ -27,7 +27,6 @@ $(window).scroll(function() {
     var calc = 1 - (scroll / range);
     var calcscale = 1 - ((1 - calc)/6);
     var calcmargin = -1*((scroll / range) * 50);
-    console.log(calcmargin);
 
     headercontents.css({ 'opacity': calc,
     '-webkit-transform': 'scale(' + calcscale + ')',
