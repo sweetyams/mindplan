@@ -4533,9 +4533,12 @@ h2 {
 .socialshares {
   width: 400px;
   margin: 0 auto;
-  padding: 20px; }
+  padding: 20px;
+  text-align: center; }
   .socialshares .sharify-title {
     display: none; }
+  .socialshares .sharify-container ul {
+    height: 48px; }
   .socialshares .sharify-container li {
     border-radius: 2px;
     display: inline-block; }
