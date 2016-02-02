@@ -3,7 +3,7 @@
 Template Name: Blog
 */
 
-get_header("home"); 
+get_header("homeA"); 
 $url = get_template_directory_uri();
 ?>
 
