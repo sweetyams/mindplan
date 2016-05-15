@@ -4,7 +4,19 @@ $url = get_template_directory_uri();
 $category = get_the_category();
 $cat_id = $category[0]->cat_ID;
 $slug = 'category_' . $cat_id;
-$bg = get_field('cat_full',$slug);
+$cat_img = get_field('cat_full',$slug);
+
+$thumb_id = get_post_thumbnail_id();
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+$thumb_url = $thumb_url_array[0];
+
+if($thumb_url){
+  $bg = $thumb_url;
+} else {
+  $bg = $cat_img;
+}
+
+
 ?>
 <?php while (have_posts()) : the_post(); ?>
 
