@@ -4538,11 +4538,11 @@ h2 {
   .single-bar.visible {
     bottom: 0; }
   .single-bar .socialshares {
-    width: auto;
+    width: 400px;
     margin: 0 auto;
     padding: 0;
     position: absolute;
-    top: 0;
+    top: 4px;
     left: calc(21% + 50px);
     margin-top: 6px; }
   .single-bar .logo span {

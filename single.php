@@ -58,9 +58,6 @@ $bg = get_field('cat_full',$slug);
     <div class="small-12 medium-8 large-7 small-centered columns white blog-content bottom-30">
   
       <div class="top-40 bottom-40">
-        <div class=" panel gray socialshares">
-          <?php echo do_shortcode('[sharify] '); ?>
-        </div>
       </div>
       <div class="single-content">
       <?php the_content(); ?>
@@ -115,7 +112,7 @@ $bg = get_field('cat_full',$slug);
       </div>
 
       <div class="center socialshares">
-         <?php echo do_shortcode('[sharify] '); ?>
+          <?php echo do_shortcode('[et_social_follow icon_style="simple" icon_shape="rounded" icons_location="left" col_number="2" outer_color="dark" network_names="true"]'); ?>
       </div>
 
       <div class="right subscribe">
