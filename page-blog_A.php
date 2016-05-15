@@ -24,7 +24,8 @@ $url = get_template_directory_uri();
       
       <div class="home-form">
         <div class="panel navy">
-        <h3 class="bottom-20">Mental health tips and tricks.<br>Delivered weekly.</h3>
+        <h2 class="bottom-10">Consumer Heal Thyself</h2>
+        <h3 class="bottom-20">Helpful news, views, and reviews on <br>the psychology of everything.</h3>
         <?php echo do_shortcode("[mc4wp_form id='5']"); ?>
         <h6 class="top-20">AMAZING CONTENT, AND ONLY ONE CLICK TO UNSUBSCRIBE</h6>
         </div>
